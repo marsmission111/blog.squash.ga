@@ -1,0 +1,108 @@
+﻿
+<cover::cover.jpg>
+
+<title>UNO Game written in Python</title>
+<subtitle>for those who have no friends to play with</subtitle>
+
+<authorlink::http://ryancurry.ga>
+<author>Ryan Curry</author>
+<date>December 24, 2018</date>
+
+<p>I came up with the idea of a program which plays UNO with you in one of my study hall periods. I came upon the realization that I had no friends to play UNO with, and given the fact that my computer is my only friend, I programed it to play UNO with me! This post is an overview of the creation of the program, this should not be treated as a tutorial. For those who have no interest in reading the creation process, a copy of the Python 2.7 file can be found <link::unoGame.py>here</link>. It is important to note that the program is in active development, and may have bugs or missing features; however, I will be adding more content and polish to the program so check in again soon!</p>
+
+<heading>The Deck</heading>
+
+<p>One of the most tedious tasks by far in this project was creating the UNO deck. I was lazy and did not want to spend my evening typing out every single UNO card, so I made a program to do it for me! Given that UNO has a lot of repeated cards and a lot of similar patterns, creating a program to create the deck for me saved tons of time. The program I created is shown below: (P.S. just skip to the bottom, this spagetti code is better then Mama Mia's spagetti)</p>
+
+<code>
+f= open("output.txt","w+")
+lst = []
+lstOther = ["reverse", "drawTwo"]
+lstWild = ["wild", "wildDraw4"]
+counter = 0
+counterOther = 0
+
+while counter <= 9:
+  lst.append("yellow_"+str(counter))
+  lst.append("red_"+str(counter))
+  lst.append("green_"+str(counter))
+  lst.append("blue_"+str(counter))
+  counter+=1
+
+print lst
+
+
+lst.append("yellow_"+lstOther[0])
+lst.append("red_"+lstOther[0])
+lst.append("green_"+lstOther[0])
+lst.append("blue_"+lstOther[0]) 
+lst.append("yellow_"+lstOther[0])
+lst.append("red_"+lstOther[0])
+lst.append("green_"+lstOther[0])
+lst.append("blue_"+lstOther[0])
+
+lst.append("yellow_"+lstOther[1])
+lst.append("red_"+lstOther[1])
+lst.append("green_"+lstOther[1])
+lst.append("blue_"+lstOther[1])
+lst.append("yellow_"+lstOther[1])
+lst.append("red_"+lstOther[1])
+lst.append("green_"+lstOther[1])
+lst.append("blue_"+lstOther[1])
+
+
+while counterOther <= 4:
+  lst.append("wild_"+lstWild[0])
+  lst.append("wild_"+lstWild[1])
+  counterOther+=1
+
+print lst
+f.write(str(lst))
+</code>
+
+<p>As you can clearly see, this code is very ugly. For the sake of saving the life of your eyes and your computer the outputted file can be found <link::output.txt>here</link>.</p>
+
+<heading>Creating the Variables</heading>
+
+<p>Since we want this program to be scale-able, we want the users to input the number of players (or computer player instances) he or she would like to play with. Sounds easy right? Just have 15 variables programmed and be ready to be used. Well, what happens if the player enters in 1000 players, or 100000 players? We cannot have 1000 variables pre-coded ready for that insane UNO player to finally care enough about me to use my program (don’t ask, its personal).</p>
+
+<img::crowded.jpg>This is too much, Cheif</img>
+
+<p>There is a nifty command called globals() in python, which creates global variables just from a string (which will become very important when I want 1000 players to play UNO with each other). To make the desired number of players, my program uses a for loop which iterates for every player the user wants, as shown below:</p>
+
+<code>
+for i in range(int(playerNum)):
+    globals()['player_{}'.format(i)] = []
+    playerLst.append('player_'+str(i))
+    dealer(globals()['player_'+str(i)], handSize)
+</code>
+
+<p>The players are named ‘player_’ plus whatever number is next i.e. player_0, player_1, player_2. The dealer function is to add cards to the player's hand, where the addCard function appends the first index from the main deck then removes that card from the main deck:</p>
+
+<code>
+def dealer(player, handSize):
+  for i in range(handSize):
+    addCard(player, unoDiscard)
+</code>
+
+<heading>Users and User Input</heading>
+
+<p>This was probably the easiest part of this whole project, creating the users. Given the fact that I can already, dynamically, create players from a simple user-inputted integer, all I needed to do to create the users is to first ask for a name for each user and, using the code I just wrote, make that the naming scheme of the players.</p>
+
+<p>Now for user input, because I am lazy, I made a list of commands that a user might want to do in a real game, numbered them, added if statements and bam! I now have dynamic user input. A copy of the actions a user can take is shown below:</p>
+
+<code>
+print 'Hand: ' + str(user)
+print '1. Play card and end turn'
+print '2. Draw card and end turn'
+print '3. Check hand size of next player'
+print '4. Check hand size of previous player'
+</code>
+
+<heading>The Computer-Player</heading>
+
+<p>To teach something, you first need to know how it works. To create smart UNO players, we first need to understand how a person plays UNO. It breaks down pretty simple, first a person checks if the next person is about to win, if so, he or she will do anything in his or her power to stop them from winning i.e. wild draw four cards, draw two cards, reverse cards etc. If the next player isn’t about to win, a user will generally try to match the color first, then, if the person cannot do so, he or she will resort to a number match. If none of these options are possible, a wild will generally be played, if the person has a wild card. Lastly, since the draw two cards and reverse cards are better used to keep another person from winning, a user will generally want to play these cards last.</p>
+
+<heading>Summary</heading>
+
+<p>I quite enjoyed making this program, if you would like a more in-depth discussion of the creation of the program contact me here, and I may be obliged to do so. For a copy of the UNO game go <link::unoGame.py>here</link>. It’s worth noting that this isn’t a polished program by any stretch of the imagination; however, I will be adding more content and polish to the program so check in again soon!</p>
