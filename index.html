@@ -19,15 +19,18 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="css/carousel.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/clean-blog.min.css" rel="stylesheet">
 
     <!-- Loader CSS -->
     <link href="css/loader.css" rel="stylesheet">
 
-  </head>
+    <!-- Addons -->
+    <link rel="stylesheet" type="text/css" href="css/addons.css">
 
-  <body> 
+  </head>
+  <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -55,101 +58,211 @@
         </div>
       </div>
     </nav>
+    <main role="main">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <header class="masthead">
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('articles/pA5vpK/cover.jpg');">
+              <div class="container">
+                <div class="overlay"></div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                      <div class="post-heading">
+                        <a class="nostyle" href="articles/pA5vpK/">
+                        <h1>UNO Game written in Python</h1>
+                        <h2 class="subheading">for those who have no friends to play with</h2>
+                         </a>
+                        <span class="meta">Posted by
+                          <a href="http://ryancurry.ga">Ryan Curry</a>
+                          on December 22, 2018</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('articles/kn5Zmh/cover.jpg');">
+              <div class="container">
+                <div class="overlay"></div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                      <div class="post-heading">
+                        <a class="nostyle" href="articles/kn5Zmh/">
+                        <h1>Scarring myself with a Reddit Image Scrapper</h1>
+                        <h2 class="subheading">I don't know why I made this program</h2>
+                      </a>
+                        <span class="meta">Posted by
+                          <a href="http://ryancurry.ga">Ryan Curry</a>
+                          on December 25, 2018</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img/post-bg.jpg');">
+              <div class="container">
+                <div class="overlay"></div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                      <div class="post-heading">
+                        <a class="nostyle" href="contact.html">
+                        <h1>Coming Soon!</h1>
+                        <h2 class="subheading">contact us to post an article</h2>
+                      </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </header>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
-      <div class="overlay"></div>
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1>Squash Blog</h1>
-              <span class="subheading">a blog which has no purpose</span>
+      	<h1 style="text-align: center; padding: 20px; padding-bottom: 50px;">Featured</h1>
+      	<hr>
+      	<div class="card-columns">
+		  <div class="card">
+		    <img class="card-img-top" src="articles/pA5vpK/cover.jpg" alt="Card image cap">
+		    <div class="card-body">
+		      <h5 class="card-title">UNO Game written in Python</h5>
+		      <p class="card-text">"I came up with the idea of a program which plays UNO with you in one of my study hall periods. I came upon the realization that I had..."</p>
+		      <a href="articles/pA5vpk/" class="btn btn-primary">Continue Reading</a>
+		      <p class="card-text"><small class="text-muted">December 22, 2018</small></p>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img class="card-img-top" src="articles/kn5Zmh/cover.jpg" alt="Card image cap">
+		    <div class="card-body">
+		      <h5 class="card-title">Scarring myself with a Reddit Image Scrapper</h5>
+		      <p class="card-text">"Since I have a massive intellect (don’t quote me on that), I thought it would be a good idea to make a program which scrapes reddit for posted images..."</p>
+		      <a href="articles/kn5Zmh/" class="btn btn-primary">Continue Reading</a>
+		      <p class="card-text"><small class="text-muted">December 25, 2018</small></p>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img class="card-img-top" src="img/post-bg.jpg" alt="Card image cap">
+		    <div class="card-body">
+		      <h5 class="card-title">Coming Soon</h5>
+		      <p class="card-text">If you would like to post an article here, contact us!</p>
+		      <a href="contact.html" class="btn btn-primary">Contact Us!</a>
+		      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img class="card-img-top" src="img/post-bg.jpg" alt="Card image cap">
+		    <div class="card-body">
+		      <h5 class="card-title">Coming Soon</h5>
+		      <p class="card-text">If you would like to post an article here, contact us!</p>
+		      <a href="contact.html" class="btn btn-primary">Contact Us!</a>
+		      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+		    </div>
+		  </div>
+		  <div class="card">
+		    <img class="card-img-top" src="img/post-bg.jpg" alt="Card image cap">
+		    <div class="card-body">
+		      <h5 class="card-title">Coming Soon</h5>
+		      <p class="card-text">If you would like to post an article here, contact us!</p>
+		      <a href="contact.html" class="btn btn-primary">Contact Us!</a>
+		      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+		    </div>
+		  </div>
+		</div>
+
+		<hr>
+
+	    <h1 style="text-align: center; padding: 20px; padding-bottom: 50px;">Our Team</h1>
+	    <div class="row">
+	      <div class="col-lg-12">
+	      </div>
+	      <div class="col-lg-4 col-sm-6 text-center mb-4">
+	        <img class="rounded-circle img-fluid d-block mx-auto" src="img/profileClose.jpg" alt="">
+	        <h3>Ryan Curry
+	          <small>Creator</small>
+	        </h3>
+	        <p>Ryan Curry is the creator and founder of Squash. Check him out at <a href="http://ryancurry.ga">ryancurry.ga</a>!</p>
+	      </div>
+	      <div class="col-lg-4 col-sm-6 text-center mb-4">
+	        <img class="rounded-circle img-fluid d-block mx-auto" src="img/profileGabe.jpg" alt="">
+	        <h3>Gabe Crooks
+	          <small>Writer</small>
+	        </h3>
+	        <p>Gabriel Crooks is a writer and editor for posts. His area of expertise is C++.</p>
+	      </div>
+	      <div class="col-lg-4 col-sm-6 text-center mb-4">
+	        <img class="rounded-circle img-fluid d-block mx-auto" src="img/profileCale.jpg" alt="">
+	        <h3>Cale Finke
+	          <small>Writer</small>
+	        </h3>
+	        <p>Cale Finke is a writer and editor for posts. His area of expertise is Python 3.7.</p>
+	      </div>
+	    </div>
+
+      </div>
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <hr>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+              <ul class="list-inline text-center">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <span class="fa-stack fa-lg">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <p class="copyright text-muted">Copyright &copy; Squash 2018</p>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </footer>
+    </main>
 
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-        	<div class="post-preview">
-            <a href="articles/kn5Zmh/">
-              <h2 class="post-title">
-                Scarring myself with a Reddit Image Scrapper
-              </h2>
-              <h3 class="post-subtitle">
-                I don't know why I made this program
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="http://ryancurry.ga">Ryan Curry</a>
-              on December 25, 2018</p>
-          </div>
-          <div class="post-preview">
-            <a href="uno.html">
-              <h2 class="post-title">
-                UNO Game written in Python
-              </h2>
-              <h3 class="post-subtitle">
-                for those who have no friends to play with
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="http://ryancurry.ga">Ryan Curry</a>
-              on December 22, 2018</p>
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="posts.html">Older Posts &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">Copyright &copy; Squash 2018</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
     <!-- Preloader -->
     <div id="preloader" style="z-index: 9999999999;"> 
       <div id="loader"></div>
@@ -165,7 +278,5 @@
 
     <!-- Custom loader -->
     <script src="js/loader.js"></script>
-
   </body>
-
 </html>
