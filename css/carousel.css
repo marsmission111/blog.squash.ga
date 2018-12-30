@@ -34,20 +34,6 @@ body {
   height: 32rem;
 }
 
-a.nostyle:link {
-  text-decoration: inherit;
-  color: inherit;
-}
-
-a.nostyle:visited {
-  text-decoration: inherit;
-  color: inherit;
-}
-
-a.nostyle:hover{
-  color: lightgray;
-}
-
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
